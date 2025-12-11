@@ -1,6 +1,6 @@
 package br.com.jtech.tasklist.domain.model;
 
-import main.java.br.com.jtech.tasklist.domain.exception.InvalidTaskException;
+import br.com.jtech.tasklist.domain.exception.InvalidTaskException;
 
 import java.time.LocalDateTime;
 import java.util.UUID;

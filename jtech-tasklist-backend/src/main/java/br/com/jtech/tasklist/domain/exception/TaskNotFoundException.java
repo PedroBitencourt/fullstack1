@@ -1,4 +1,4 @@
-package main.java.br.com.jtech.tasklist.domain.exception;
+package br.com.jtech.tasklist.domain.exception;
 
 import java.util.UUID;
 

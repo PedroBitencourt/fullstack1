@@ -13,7 +13,6 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 @Component
 @RequiredArgsConstructor
@@ -41,7 +40,7 @@ public class TaskPersistenceAdapter implements TaskRepositoryPort {
         return jpaRepository.findAll()
                 .stream()
                 .map(mapper::toDomain)
-                .collect(Collectors.toList());
+                .toList();
     }
 
     @Override
@@ -49,7 +48,7 @@ public class TaskPersistenceAdapter implements TaskRepositoryPort {
         return jpaRepository.findByStatus(status)
                 .stream()
                 .map(mapper::toDomain)
-                .collect(Collectors.toList());
+                .toList();
     }
 
     @Override

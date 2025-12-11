@@ -1,4 +1,4 @@
-package main.java.br.com.jtech.tasklist.domain.exception;
+package br.com.jtech.tasklist.domain.exception;
 
 public class InvalidTaskException extends RuntimeException {
 

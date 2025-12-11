@@ -8,11 +8,11 @@ import br.com.jtech.tasklist.application.port.in.command.CreateTaskCommand;
 import br.com.jtech.tasklist.application.port.in.command.DeleteTaskCommand;
 import br.com.jtech.tasklist.application.port.in.command.UpdateTaskCommand;
 import br.com.jtech.tasklist.application.port.out.TaskRepositoryPort;
+import br.com.jtech.tasklist.domain.exception.TaskNotFoundException;
 import br.com.jtech.tasklist.domain.model.Task;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-import main.java.br.com.jtech.tasklist.domain.exception.TaskNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.time.Clock;
