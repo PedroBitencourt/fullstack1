@@ -31,7 +31,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("api/v1/tasks")
+@RequestMapping("/api/v1/tasks")
 @RequiredArgsConstructor
 @Slf4j
 public class TaskController implements TaskControllerDocs {

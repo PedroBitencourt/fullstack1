@@ -44,14 +44,6 @@ public class TaskPersistenceAdapter implements TaskRepositoryPort {
     }
 
     @Override
-    public List<Task> findByStatus(TaskStatus status) {
-        return jpaRepository.findByStatus(status)
-                .stream()
-                .map(mapper::toDomain)
-                .toList();
-    }
-
-    @Override
     public boolean existsById(UUID id) {
         return jpaRepository.existsById(id);
     }
@@ -59,10 +51,5 @@ public class TaskPersistenceAdapter implements TaskRepositoryPort {
     @Override
     public void deleteById(UUID id) {
         jpaRepository.deleteById(id);
-    }
-
-    @Override
-    public long count() {
-        return jpaRepository.count();
     }
 }

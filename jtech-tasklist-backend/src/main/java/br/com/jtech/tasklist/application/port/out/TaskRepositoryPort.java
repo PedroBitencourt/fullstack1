@@ -16,11 +16,7 @@ public interface TaskRepositoryPort {
 
     List<Task> findAll();
 
-    List<Task> findByStatus(TaskStatus status);
-
     boolean existsById(UUID id);
 
     void deleteById(UUID id);
-
-    long count();
 }

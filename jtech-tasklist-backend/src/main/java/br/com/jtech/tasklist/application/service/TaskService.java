@@ -66,11 +66,11 @@ public class TaskService implements
         task.updateDetails(
                 command.title(),
                 command.description(),
-                LocalDateTime.now()
+                LocalDateTime.now(clock)
         );
 
         if (command.status() != null) {
-            task.changeStatus(command.status(), LocalDateTime.now());
+            task.changeStatus(command.status(), LocalDateTime.now(clock));
         }
 
         return repository.save(task);
