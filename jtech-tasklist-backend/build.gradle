@@ -37,7 +37,6 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation "org.flywaydb:flyway-core"
 	implementation "org.flywaydb:flyway-database-postgresql"
-	implementation "org.mapstruct:mapstruct:${mapstructVersion}"
 	testImplementation "org.assertj:assertj-core:3.24.2"
 	testImplementation "com.google.code.bean-matchers:bean-matchers:0.14"
 	testImplementation "org.junit.platform:junit-platform-suite-engine:1.9.2"
@@ -49,7 +48,6 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	runtimeOnly 'org.postgresql:postgresql'
 	annotationProcessor 'org.projectlombok:lombok'
-	annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}"
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }

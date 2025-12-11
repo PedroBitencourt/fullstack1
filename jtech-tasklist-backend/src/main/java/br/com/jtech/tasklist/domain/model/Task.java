@@ -1,4 +1,4 @@
-package main.java.br.com.jtech.tasklist.domain.model;
+package br.com.jtech.tasklist.domain.model;
 
 import main.java.br.com.jtech.tasklist.domain.exception.InvalidTaskException;
 
@@ -15,9 +15,8 @@ public class Task {
     private LocalDateTime updatedAt;
 
     public Task(String title, String description, LocalDateTime now) {
-        if (title == null || title.isBlank()) {
-            throw InvalidTaskException.titleIsRequired();
-        }
+        validateTitle(title);
+
         this.id = UUID.randomUUID();
         this.title = title;
         this.description = description;
@@ -25,27 +24,26 @@ public class Task {
         this.createdAt = now;
     }
 
-    public Task(UUID id, String title,String description, TaskStatus status,
-                LocalDateTime createdAt, LocalDateTime updatedAt) {
-        this.id = id;
+    public void updateDetails(String title, String description, LocalDateTime now) {
+        validateTitle(title);
+
         this.title = title;
         this.description = description;
-        this.status = status;
-        this.createdAt = createdAt;
-        this.updatedAt = updatedAt;
-    }
-
-    public void concluir(LocalDateTime now) {
-        this.status = TaskStatus.COMPLETED;
         this.updatedAt = now;
     }
 
-    public void iniciarProgresso(LocalDateTime now) {
+    public void changeStatus(TaskStatus newStatus, LocalDateTime now) {
         if (this.status == TaskStatus.COMPLETED) {
             throw InvalidTaskException.taskAlreadyCompleted();
         }
-        this.status = TaskStatus.IN_PROGRESS;
+        this.status = newStatus;
         this.updatedAt = now;
+    }
+
+    private void validateTitle(String title) {
+        if (title == null || title.isBlank()) {
+            throw InvalidTaskException.titleIsRequired();
+        }
     }
 }
 

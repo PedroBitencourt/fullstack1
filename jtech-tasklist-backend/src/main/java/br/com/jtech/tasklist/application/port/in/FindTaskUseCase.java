@@ -1,6 +1,6 @@
-package main.java.br.com.jtech.tasklist.application.port.in;
+package br.com.jtech.tasklist.application.port.in;
 
-import main.java.br.com.jtech.tasklist.domain.model.Task;
+import br.com.jtech.tasklist.domain.model.Task;
 
 import java.util.List;
 import java.util.UUID;

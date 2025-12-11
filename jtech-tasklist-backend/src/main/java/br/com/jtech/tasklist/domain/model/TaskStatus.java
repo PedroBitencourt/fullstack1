@@ -1,4 +1,4 @@
-package main.java.br.com.jtech.tasklist.domain.model;
+package br.com.jtech.tasklist.domain.model;
 
 public enum TaskStatus {
     PENDING("Pendente", "Tarefa ainda não iniciada"),

@@ -1,4 +1,4 @@
-package main.java.br.com.jtech.tasklist.application.port.in.command;
+package br.com.jtech.tasklist.application.port.in.command;
 
 public record CreateTaskCommand(
         String title,
