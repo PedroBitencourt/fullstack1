@@ -13,7 +13,7 @@
 package br.com.jtech.tasklist.application.core.domains;
 
 import br.com.jtech.tasklist.adapters.input.protocols.TasklistRequest;
-import br.com.jtech.tasklist.adapters.output.repositories.entities.TasklistEntity;
+import br.com.jtech.tasklist.adapters.output.persistence.entities.TaskEntity;
 import lombok.*;
 
 import java.util.UUID;
@@ -35,17 +35,17 @@ public class Tasklist {
 
     private String id;
 
-    public static List<Tasklist> of(List<TasklistEntity> entities) {
+    public static List<Tasklist> of(List<TaskEntity> entities) {
         return entities.stream().map(Tasklist::of).toList();
      }
 
-    public TasklistEntity toEntity() {
-        return TasklistEntity.builder()
+    public TaskEntity toEntity() {
+        return TaskEntity.builder()
             .id(UUID.fromString(getId()))
             .build();
      }
 
-    public static Tasklist of(TasklistEntity entity) {
+    public static Tasklist of(TaskEntity entity) {
         return Tasklist.builder()
             .id(entity.getId().toString())
             .build();

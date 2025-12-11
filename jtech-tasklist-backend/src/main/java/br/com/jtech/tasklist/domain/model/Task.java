@@ -22,6 +22,7 @@ public class Task {
         this.description = description;
         this.status = TaskStatus.PENDING;
         this.createdAt = now;
+        this.updatedAt = now;
     }
 
     public void updateDetails(String title, String description, LocalDateTime now) {
