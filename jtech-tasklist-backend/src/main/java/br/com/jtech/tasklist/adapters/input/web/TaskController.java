@@ -1,5 +1,6 @@
 package br.com.jtech.tasklist.adapters.input.web;
 
+import br.com.jtech.tasklist.adapters.input.web.documentation.TaskControllerDocs;
 import br.com.jtech.tasklist.adapters.input.web.dto.TaskRequest;
 import br.com.jtech.tasklist.adapters.input.web.dto.TaskResponse;
 import br.com.jtech.tasklist.adapters.input.web.dto.TaskUpdateRequest;
@@ -33,7 +34,7 @@ import java.util.UUID;
 @RequestMapping("api/v1/tasks")
 @RequiredArgsConstructor
 @Slf4j
-public class TaskController {
+public class TaskController implements TaskControllerDocs {
 
     private final CreateTaskUseCase createTaskUseCase;
     private final FindTaskUseCase findTaskUseCase;
