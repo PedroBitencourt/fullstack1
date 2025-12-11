@@ -38,7 +38,7 @@ public class TaskEntity {
     @Column(nullable = false, length = 20)
     private TaskStatus status;
 
-    @Column(name = "data_criacao", nullable = false, updatable = false)
+    @Column(nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
     @Column(nullable = false)
