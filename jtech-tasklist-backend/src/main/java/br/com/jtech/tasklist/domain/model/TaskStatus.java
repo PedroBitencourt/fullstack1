@@ -12,4 +12,12 @@ public enum TaskStatus {
         this.name = name;
         this.description = description;
     }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

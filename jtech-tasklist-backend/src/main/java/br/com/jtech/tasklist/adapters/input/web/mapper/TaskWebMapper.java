@@ -18,6 +18,6 @@ public interface TaskWebMapper {
     CreateTaskCommand toCreateTaskCommand(TaskRequest request);
     UpdateTaskCommand toUpdateTaskCommand(UUID id, TaskUpdateRequest request);
 
-    @Mapping(target = "statusDescricao", source = "status.descricao")
+    @Mapping(target = "statusDescription", source = "status.description")
     TaskResponse toResponse(Task domain);
 }

@@ -1,22 +1,27 @@
-# ==== Build stage ====
 FROM eclipse-temurin:21-jdk AS build
 
 WORKDIR /app
 
-COPY mvnw .
-COPY .mvn .mvn
-COPY pom.xml .
-RUN ./mvnw -q dependency:go-offline
+RUN apt-get update && apt-get install -y git unzip && rm -rf /var/lib/apt/lists/*
+
+COPY gradlew .
+COPY gradle gradle
+COPY build.gradle .
+COPY settings.gradle .
+
+RUN chmod +x gradlew
+
+RUN ./gradlew --no-daemon build -x test || true
 
 COPY src src
-RUN ./mvnw -q package -DskipTests
 
-# ==== Runtime stage ====
+RUN ./gradlew --no-daemon build -x test --stacktrace --info
+
 FROM eclipse-temurin:21-jre
 
 WORKDIR /app
 
-COPY --from=build /app/target/*.jar app.jar
+COPY --from=build /app/build/libs/*.jar app.jar
 
 EXPOSE 8080
 

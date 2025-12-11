@@ -15,7 +15,9 @@ services:
       - postgres-data:/var/lib/postgresql/data
 
   app:
-    build: .
+    build:
+      context: ../
+      dockerfile: Dockerfile
     container_name: task-api
     depends_on:
       - db
