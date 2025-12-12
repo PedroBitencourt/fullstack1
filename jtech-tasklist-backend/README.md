@@ -134,9 +134,10 @@ docker-compose up --build
 ## Points to improve
 
 - Paginação no endpoint de listagem.
+- Busca por status da tarefa
+- Filtros de ordenação
 - Autenticação e autorização (JWT).
 - Testes de integração com Testcontainers no lugar de H2.
 - Cache para otimizar performance.
-- Atualizações em tempo real com WebSockets.
 
 ---

@@ -68,12 +68,6 @@ export const useTaskStore = defineStore("taskStore", () => {
     }
   }
 
-  /**
-   * ✅ Busca por id:
-   * 1) tenta achar no state local
-   * 2) se não achar, busca na API
-   * 3) se achar, atualiza/inserir no state
-   */
   async function getTaskById(id: string): Promise<TaskResponse> {
     clearError();
 
