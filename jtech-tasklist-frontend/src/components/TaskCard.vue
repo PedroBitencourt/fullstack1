@@ -90,9 +90,7 @@ function emitEdit() {
 }
 
 function onDelete() {
-  if (confirm('Tem certeza que deseja excluir esta tarefa?')) {
     emit('delete', props.task.id);
-  }
 }
 
 function formatDate(dt?: string) {
