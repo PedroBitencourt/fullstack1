@@ -1,45 +1,32 @@
-# jtech-tasklist
+# jtech-tasklist (Frontend)
 
-This template should help get you started developing with Vue 3 in Vite.
+Aplicação **Vue 3 + TypeScript** para gerenciar tarefas integrada ao backend Spring em `/api/v1/tasks`.  
+UI com **Tailwind CSS v4** e **modais locais** para **Criar / Editar / Excluir** (sem páginas separadas).
 
-## Recommended IDE Setup
+---
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## ⚙️ Stack
+- Vue 3 (Composition API) + Vite
+- TypeScript
+- Pinia (store)
+- Vue Router (rotas)
+- Axios (HTTP)
+- Tailwind CSS **v4**
+- ESLint / Vitest (opcional)
 
-## Type Support for `.vue` Imports in TS
+---
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## ✅ Requisitos
+- **Node.js 20.19+** ou **22.12+** (Vite exige isso)
+- Backend rodando (padrão: `http://localhost:8080`)
 
-## Customize configuration
+---
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 🚀 Como rodar
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+```bash
+npm install            
+npm run dev            
+npm run build          
+npm run test:unit      
+npm run lint          
