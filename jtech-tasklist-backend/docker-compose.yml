@@ -16,7 +16,7 @@ services:
 
   app:
     build:
-      context: ../
+      context: ./
       dockerfile: Dockerfile
     container_name: task-api
     depends_on:
